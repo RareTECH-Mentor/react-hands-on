@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:5173"
+    volumes:
+      - ./counter-app:/app/counter-app
+      - data:/app/counter-app/node_modules
+    stdin_open: true
+    tty: true
+
+volumes:
+  data:
